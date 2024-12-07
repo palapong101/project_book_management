@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>Book ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Actions</th> <!-- คอลัมน์สำหรับปุ่ม -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.id }}</td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.description }}</td>
+      <td>{{ book.status }}</td>
+      <td>
+        <!-- ปุ่ม Edit -->
+        <button (click)="editBook(book.id)" class="btn-edit">Edit</button>
+        <!-- ปุ่ม Delete -->
+        <button (click)="deleteBook(book.id)" class="btn-delete">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

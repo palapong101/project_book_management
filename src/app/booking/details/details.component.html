@@ -1,0 +1,32 @@
+<div class="details-container">
+  <h1>All Book Details</h1>
+
+  <!-- ตารางแสดงข้อมูลหนังสือ -->
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.id }}</td>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.description }}</td>
+          <td>{{ book.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ปุ่มกลับ -->
+  <div class="action-buttons">
+    <button class="btn btn-back" (click)="goBack()">Back to Home</button>
+  </div>
+</div>

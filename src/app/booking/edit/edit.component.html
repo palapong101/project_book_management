@@ -1,0 +1,79 @@
+<div class="container mt-5">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h4 class="mb-0">Edit Book</h4>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="saveBook()">
+        <!-- Title -->
+        <div class="form-group mb-3">
+          <label for="title" class="form-label">Book Title</label>
+          <input
+            id="title"
+            type="text"
+            [(ngModel)]="book.title"
+            name="title"
+            class="form-control"
+            placeholder="Enter book title"
+            required
+          />
+        </div>
+
+        <!-- Author -->
+        <div class="form-group mb-3">
+          <label for="author" class="form-label">Author</label>
+          <input
+            id="author"
+            type="text"
+            [(ngModel)]="book.author"
+            name="author"
+            class="form-control"
+            placeholder="Enter author name"
+            required
+          />
+        </div>
+
+        <!-- Description -->
+        <div class="form-group mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            id="description"
+            [(ngModel)]="book.description"
+            name="description"
+            class="form-control"
+            rows="3"
+            placeholder="Enter book description"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Status -->
+        <div class="form-group mb-4">
+          <label for="status" class="form-label">Status</label>
+          <select
+            id="status"
+            [(ngModel)]="book.status"
+            name="status"
+            class="form-select"
+            required
+          >
+            <option value="available">Available</option>
+            <option value="unavailable">Unavailable</option>
+          </select>
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-success me-2">Save</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="router.navigate(['/'])"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="booking-home-container">
+  <h1>Booking Management</h1>
+
+  <div class="action-buttons">
+    <!-- ปุ่ม Add Book -->
+    <button class="btn btn-add" (click)="addBook()">Add Book</button>
+    <!-- ปุ่ม Show All Books -->
+    <button class="btn btn-show-book" (click)="showAllBooks()">Show All Books</button>
+  </div>
+
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.title }}</td>
+          <td>
+            <button (click)="editBook(book.id)" class="btn btn-edit">Edit</button>
+            <button (click)="deleteBook(book.id)" class="btn btn-delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

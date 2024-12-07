@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+/* Color palette for professional theme */
+:root {
+    --primary-color: #2C3E50; /* Dark blue for a professional look */
+    --secondary-color: #3498db; /* Blue for accents */
+    --highlight-color: #f39c12; /* Gold for highlighting */
+    --background-color: #ecf0f1; /* Light background */
+    --text-color: #34495e; /* Dark gray for text */
+    --border-color: #bdc3c7; /* Border color */
+    --button-hover-color: rgba(52, 152, 219, 0.8); /* Blue hover for buttons */
+    --error-color: #e74c3c; /* Error color */
+  }
+  
+  /* Global Reset */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Container for all pages */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
